@@ -26,6 +26,10 @@ func (s *Stack) Pop() string {
 
 func (s *Stack) ToString() {
 	for i := len(s.stack) - 1; i > -1; i-- {
-		fmt.Println(s.stack[i])
+		if i == len(s.stack)-1 {
+			fmt.Println(s.stack[i] + " < top")
+		} else {
+			fmt.Println(s.stack[i])
+		}
 	}
 }
